@@ -1,20 +1,7 @@
 #include <iostream>
+#include "getVolumeSurface.h"
 using namespace std;
 //#include "getVolumeSurface.h"
-
-struct BOX {	//箱の定義
-	double x;	//幅
-	double y;	//高さ
-	double z;	//奥行
-	double volume;	//体積
-	double surface; //表面積
-};
-
-void getVolumeSurface(BOX* box) {
-	box->volume = box->x * box->y * box->z;
-	box->surface = 2 * (box->x * box->y + box->x * box->z + box->y * box->z);
-	return;
-}
 int main()
 {
 	const int BoxCount = 3;
@@ -29,6 +16,14 @@ int main()
 		getVolumeSurface(&boxes[i]);
 		cout << "体積は" << boxes[i].volume << endl;
 		cout << "表面積は" << boxes[i].surface << endl;
+		
+		if (boxes[i].deliverable) {
+			cout << boxes[i].packSize << "サイズで送れます" << endl;
+		}
+		else
+		{
+			cout << "宅急便では送れません" << endl;
+		}
 	}
 	return 0;
 }

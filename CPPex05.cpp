@@ -17,7 +17,6 @@ int main()
 		isSendable(&boxes[i]);
 		cout << "体積は" << boxes[i].volume << endl;
 		cout << "表面積は" << boxes[i].surface << endl;
-		
 		if (boxes[i].deliverable) {
 			cout << boxes[i].packSize << "サイズで送れます" << endl;
 		}

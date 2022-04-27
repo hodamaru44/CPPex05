@@ -14,6 +14,7 @@ int main()
 		cout << "‰œs‚ð“ü—ÍF";
 		cin >> boxes[i].z;
 		getVolumeSurface(&boxes[i]);
+		isSendable(&boxes[i]);
 		cout << "‘ÌÏ‚Í" << boxes[i].volume << endl;
 		cout << "•\–ÊÏ‚Í" << boxes[i].surface << endl;
 		
